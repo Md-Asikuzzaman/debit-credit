@@ -1,0 +1,20 @@
+
+
+Register/User:
+    username: string;
+    email: string;
+    password: string;
+
+
+Login:
+    email: string;
+    password: string;
+
+
+
+Transaction:
+    type: string;
+    ammount: number;
+    
+
+    
