@@ -4,6 +4,15 @@ import TransactionCard from "../components/TransactionCard";
 import MyChart from "../components/MyChart";
 
 const Home = async () => {
+  let earn = 50000;
+  let cost = 50011;
+
+  let earnPer = (earn / cost) * 100;
+  let costPer = (cost / earn) * 100;
+
+  // Calculate the profit or loss
+  let profitLoss = earn - cost;
+  let percentage = (profitLoss / Math.abs(cost)) * 100;
 
   return (
     <main>
@@ -14,20 +23,26 @@ const Home = async () => {
             <TransactionCard
               subtitle="30 Days Incomming"
               title="30,500"
+              status="earn"
+              statusValue={earnPer}
               credit={40000}
               debit={50000}
             />
             <TransactionCard
               subtitle="30 Days Outgoing"
               title="66,500"
+              status="cost"
+              statusValue={costPer}
               credit={80000}
               debit={43000}
               loss
             />
 
             <TransactionCard
-              subtitle="30 Days Outgoing"
+              subtitle="30 Days Average"
               title="23,500"
+              status="average"
+              statusValue={percentage}
               credit={80000}
               debit={43000}
             />
