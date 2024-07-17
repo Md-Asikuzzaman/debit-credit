@@ -4,6 +4,22 @@ import React, { useEffect, useState } from "react";
 import Chart from "react-apexcharts";
 
 const MyChart = () => {
+  let earn = 10000;
+  let cost = 9500;
+
+  let costPer = (cost / earn) * 100;
+  let earnPer = (earn / cost) * 100;
+
+  // Calculate the profit or loss
+  let profitLoss = earn - cost;
+  let percentage = (profitLoss / Math.abs(cost)) * 100;
+  let status = profitLoss >= 0 ? "gain" : "loss";
+
+  // Output the result
+  console.log("-", costPer.toFixed(2) + "%");
+  console.log("+", earnPer.toFixed(2) + "%");
+  console.log(`${percentage.toFixed(2)}% ${status}`);
+
   const data = [
     {
       month: "january",
@@ -143,6 +159,12 @@ const MyChart = () => {
       debit: Math.floor(Math.random() * 1000) + 1,
       credit: Math.floor(Math.random() * 1000) + 1,
     },
+    {
+      month: "january",
+      date: 30,
+      debit: Math.floor(Math.random() * 1000) + 1,
+      credit: Math.floor(Math.random() * 1000) + 1,
+    },
   ];
 
   const todaysDate = 31;
@@ -207,6 +229,7 @@ const MyChart = () => {
                 enabled: true,
                 delay: 500,
               },
+
               dynamicAnimation: {
                 enabled: true,
                 speed: 50,
@@ -222,8 +245,12 @@ const MyChart = () => {
 
           xaxis: {
             categories: category,
+
             axisBorder: {
               show: false,
+
+              color: "red",
+              strokeWidth: 50,
             },
             axisTicks: {
               show: false,
