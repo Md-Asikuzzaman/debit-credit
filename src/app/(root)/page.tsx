@@ -1,15 +1,13 @@
 import React from "react";
 import BreadCrumd from "../components/BreadCrumd";
 import TransactionCard from "../components/TransactionCard";
-
-import { BsGraphUpArrow } from "react-icons/bs";
 import MyChart from "../components/MyChart";
 
-const Home = () => {
+const Home = async () => {
+
   return (
     <main>
       <BreadCrumd />
-
       <div className="grid grid-cols-12 gap-8">
         <div className="col-span-12 xl:col-span-9">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
