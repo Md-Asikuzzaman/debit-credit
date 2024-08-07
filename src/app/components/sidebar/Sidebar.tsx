@@ -29,7 +29,7 @@ const Sidebar: NextPage<Props> = ({}) => {
         </li>
         <li>
           <Link
-            href={"/user"}
+            href={"/add-transaction"}
             className="flex items-center gap-2 hover:bg-[#343449] p-3 rounded-md"
           >
             <IoIosAddCircle size={25} />
