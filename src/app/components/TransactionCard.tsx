@@ -5,8 +5,10 @@ import { NextPage } from "next";
 import { BsGraphUpArrow, BsGraphDownArrow } from "react-icons/bs";
 import { IoMdArrowUp, IoMdArrowDown } from "react-icons/io";
 
+import CountUp from "react-countup";
+
 interface Props {
-  title: string;
+  title: number;
   subtitle: string;
   credit?: number;
   debit?: number;
@@ -44,7 +46,16 @@ const TransactionCard: NextPage<Props> = ({
             <BsGraphDownArrow size={30} className="text-rose-500" />
           ))}
       </h3>
-      <h2 className="text-2xl lg:text-3xl font-semibold">$ {title}</h2>
+      <h2 className="text-2xl lg:text-3xl font-semibold">
+        {/* {title} */}
+        <CountUp
+          end={title}
+          duration={2.75}
+          separator=","
+          decimals={2}
+          decimal="."
+        />
+      </h2>
       <p className="flex items-center gap-2 mt-5">
         {status === "earn" && (
           <span className="text-green-500 flex items-center gap-1">
