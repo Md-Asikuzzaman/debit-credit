@@ -27,8 +27,8 @@ const TransactionCard: NextPage<Props> = ({
   statusValue,
 }) => {
   return (
-    <div className="bg-[#1E1E2C] p-5 rounded-lg">
-      <h3 className="flex justify-between text-gray-400 test-base">
+    <div className="bg-[#241852] p-5 rounded-lg">
+      <h3 className="flex justify-between text-white test-base">
         {subtitle}
 
         {status === "earn" && (
@@ -46,7 +46,7 @@ const TransactionCard: NextPage<Props> = ({
             <BsGraphDownArrow size={30} className="text-rose-500" />
           ))}
       </h3>
-      <h2 className="text-2xl lg:text-3xl font-semibold">
+      <h2 className="text-2xl lg:text-3xl font-semibold text-white">
         {/* {title} */}
         <CountUp
           end={title}

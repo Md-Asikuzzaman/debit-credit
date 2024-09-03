@@ -3,7 +3,7 @@ import React from "react";
 const AddTransaction = () => {
   return (
     <div className="max-w-[750px] mx-auto">
-      <form>
+      <form className="bg-[#241852] p-12 rounded-xl">
         <h2 className="text-2xl md:text-3xl font-bold text-white">
           Add Transaction
         </h2>
@@ -11,16 +11,16 @@ const AddTransaction = () => {
           <input
             type="text"
             placeholder="Transaction Title"
-            className="input input-bordered w-full bg-transparent text-white border-gray-500 focus:border-gray-400"
+            className="input input-bordered w-full bg-[#1A103D] bg-transparent text-white border-gray-500 focus:border-gray-400"
           />
 
           <input
             type="number"
             placeholder="Transaction Amount"
-            className="input input-bordered w-full bg-transparent text-white border-gray-500 focus:border-gray-400"
+            className="input input-bordered w-full bg-[#1A103D] bg-transparent text-white border-gray-500 focus:border-gray-400"
           />
 
-          <select className="input input-bordered w-full bg-[#13141F] text-white border-gray-500 focus:border-gray-400">
+          <select className="input input-bordered w-full bg-[#1A103D] text-white border-gray-500 focus:border-gray-400">
             <option hidden value="">
               Select Status
             </option>
@@ -30,7 +30,7 @@ const AddTransaction = () => {
 
           <textarea
             placeholder="Description (Optional)"
-            className="input input-bordered w-full bg-[#13141F] text-white border-gray-500 focus:border-gray-400"
+            className="input input-bordered w-full bg-[#1A103D] text-white border-gray-500 focus:border-gray-400"
           ></textarea>
         </div>
         <button className="btn btn-primary">Add New</button>

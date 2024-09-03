@@ -48,7 +48,7 @@ const Home = async () => {
             />
           </div>
 
-          <div className="bg-[#1E1E2C] p-5 rounded-lg overflow-hidden mt-5">
+          <div className="bg-[#241852] p-5 rounded-lg overflow-hidden mt-5">
             <MyChart />
           </div>
         </div>

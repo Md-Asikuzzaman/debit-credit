@@ -6,7 +6,7 @@ interface Props {}
 
 const BreadCrumd: NextPage<Props> = ({}) => {
   return (
-    <div className="breadcrumbs text-sm mb-3">
+    <div className="breadcrumbs text-sm mb-3 text-white">
       <ul>
         <li>
           <a>Home</a>
