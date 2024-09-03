@@ -8,7 +8,7 @@ interface Props {
 
 const Layout: NextPage<Props> = ({ children }) => {
   return (
-    <div className="flex flex-col min-h-screen bg-[#13141F]">
+    <div className="flex flex-col min-h-screen bg-[#1A103D]">
       <Header />
       <div className="flex flex-row flex-1">
         <Sidebar />
