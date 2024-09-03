@@ -16,7 +16,7 @@ interface Props {}
 
 const Sidebar: NextPage<Props> = ({}) => {
   return (
-    <div className="bg-[#1E1E2C] min-w-[300px] flex flex-col p-5 fixed md:relative h-full md:h-auto top-0 left-0">
+    <div className="bg-[#1E1E2C] min-w-[300px] flex flex-col p-5 fixed md:relative h-full md:h-auto top-0 left-0 text-white">
       <ul className="flex-1 space-y-1">
         <li>
           <Link
